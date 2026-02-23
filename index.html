@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Akash Kant — Cloud & DevOps Engineer</title>
+<title>Akash Kant — Cloud Data Engineer</title>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Mono:wght@300;400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <style>
   @import url('https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap');
@@ -22,7 +22,6 @@
   }
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
   html { scroll-behavior: smooth; }
 
   body {
@@ -34,7 +33,6 @@
     overflow-x: hidden;
   }
 
-  /* Noise overlay */
   body::before {
     content: '';
     position: fixed;
@@ -45,7 +43,7 @@
     opacity: 0.4;
   }
 
-  /* ── NAV ── */
+  /* NAV */
   nav {
     position: fixed;
     top: 0; left: 0; right: 0;
@@ -78,7 +76,7 @@
   }
   .nav-links a:hover { color: var(--accent); }
 
-  /* ── HERO ── */
+  /* HERO */
   #hero {
     min-height: 100vh;
     display: grid;
@@ -154,11 +152,7 @@
     line-height: 1.8;
   }
 
-  .hero-cta {
-    display: flex;
-    gap: 16px;
-    flex-wrap: wrap;
-  }
+  .hero-cta { display: flex; gap: 16px; flex-wrap: wrap; }
 
   .btn-primary {
     display: inline-flex;
@@ -194,7 +188,7 @@
   }
   .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
 
-  /* Hero right — profile card */
+  /* Hero right */
   .hero-right {
     display: flex;
     justify-content: center;
@@ -202,10 +196,7 @@
     position: relative;
   }
 
-  .profile-card {
-    position: relative;
-    width: 340px;
-  }
+  .profile-card { position: relative; width: 340px; }
 
   .profile-img-wrap {
     position: relative;
@@ -234,7 +225,6 @@
     filter: grayscale(10%);
   }
 
-  /* floating stat chips */
   .stat-chip {
     position: absolute;
     background: var(--surface);
@@ -263,17 +253,15 @@
   .chip-1 { top: -20px; right: -10px; }
   .chip-2 { bottom: 30px; left: -30px; }
 
-  /* terminal line at top */
   .terminal-line {
     font-size: 12px;
     color: var(--muted);
     margin-bottom: 20px;
     letter-spacing: 0.03em;
   }
-
   .terminal-line span { color: var(--accent); }
 
-  /* ── SECTIONS ── */
+  /* SECTIONS */
   section { padding: 100px 60px; }
 
   .section-label {
@@ -294,7 +282,7 @@
     line-height: 1.05;
   }
 
-  /* ── STATS STRIP ── */
+  /* STATS STRIP */
   #stats {
     padding: 50px 60px;
     border-top: 1px solid var(--border);
@@ -328,7 +316,7 @@
     text-transform: uppercase;
   }
 
-  /* ── SKILLS ── */
+  /* SKILLS */
   #skills { background: var(--bg2); }
 
   .skills-grid {
@@ -360,11 +348,7 @@
   .skill-card:hover { border-color: var(--accent); transform: translateY(-3px); }
   .skill-card:hover::before { opacity: 1; }
 
-  .skill-icon {
-    font-size: 28px;
-    margin-bottom: 16px;
-    display: block;
-  }
+  .skill-icon { font-size: 28px; margin-bottom: 16px; display: block; }
 
   .skill-name {
     font-family: 'Clash Display', sans-serif;
@@ -374,11 +358,7 @@
     color: var(--text);
   }
 
-  .skill-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-  }
+  .skill-tags { display: flex; flex-wrap: wrap; gap: 6px; }
 
   .tag {
     background: rgba(0,212,170,0.06);
@@ -390,7 +370,7 @@
     letter-spacing: 0.05em;
   }
 
-  /* ── EXPERIENCE ── */
+  /* EXPERIENCE */
   #experience { background: var(--bg); }
 
   .exp-list { display: flex; flex-direction: column; gap: 0; }
@@ -420,6 +400,14 @@
     font-weight: 700;
     font-size: 15px;
     color: var(--muted);
+  }
+
+  .exp-client {
+    font-size: 11px;
+    color: var(--accent2);
+    margin-top: 4px;
+    opacity: 0.9;
+    letter-spacing: 0.03em;
   }
 
   .exp-loc {
@@ -453,7 +441,7 @@
     color: var(--accent);
   }
 
-  /* ── CERTIFICATIONS ── */
+  /* CERTIFICATIONS */
   #certifications { background: var(--bg2); }
 
   .cert-grid {
@@ -471,6 +459,7 @@
     align-items: flex-start;
     gap: 14px;
     transition: border-color 0.3s;
+    text-decoration: none;
   }
   .cert-card:hover { border-color: rgba(124,110,240,0.5); }
 
@@ -498,19 +487,10 @@
     line-height: 1.3;
   }
 
-  .cert-issuer {
-    font-size: 11px;
-    color: var(--muted);
-    letter-spacing: 0.05em;
-  }
+  .cert-issuer { font-size: 11px; color: var(--muted); letter-spacing: 0.05em; }
+  .cert-score { font-size: 11px; color: var(--accent); margin-top: 4px; }
 
-  .cert-score {
-    font-size: 11px;
-    color: var(--accent);
-    margin-top: 4px;
-  }
-
-  /* ── PROJECTS ── */
+  /* PROJECTS */
   #projects { background: var(--bg); }
 
   .projects-grid {
@@ -565,11 +545,7 @@
     margin-bottom: 20px;
   }
 
-  .project-stack {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-  }
+  .project-stack { display: flex; flex-wrap: wrap; gap: 6px; }
 
   .stack-tag {
     background: rgba(124,110,240,0.08);
@@ -580,12 +556,8 @@
     border-radius: 3px;
   }
 
-  /* ── CONTACT ── */
-  #contact {
-    background: var(--bg2);
-    text-align: center;
-  }
-
+  /* CONTACT */
+  #contact { background: var(--bg2); text-align: center; }
   #contact .section-title { margin-bottom: 16px; }
 
   .contact-sub {
@@ -619,7 +591,7 @@
   }
   .contact-link:hover { border-color: var(--accent); color: var(--accent); }
 
-  /* ── FOOTER ── */
+  /* FOOTER */
   footer {
     padding: 30px 60px;
     border-top: 1px solid var(--border);
@@ -631,7 +603,7 @@
   .footer-text { color: var(--muted); font-size: 12px; }
   .footer-url { color: var(--accent); font-size: 12px; text-decoration: none; }
 
-  /* ── ANIMATIONS ── */
+  /* ANIMATIONS */
   .fade-up {
     opacity: 0;
     transform: translateY(30px);
@@ -639,7 +611,7 @@
   }
   .fade-up.visible { opacity: 1; transform: translateY(0); }
 
-  /* ── RESPONSIVE ── */
+  /* RESPONSIVE */
   @media (max-width: 900px) {
     nav { padding: 18px 24px; }
     #hero { grid-template-columns: 1fr; padding: 100px 24px 60px; }
@@ -671,15 +643,15 @@
 <!-- HERO -->
 <section id="hero">
   <div class="hero-left">
-    <p class="terminal-line"><span>$</span> whoami → cloud_devops_engineer</p>
-    <div class="hero-badge">Available for opportunities</div>
+    <p class="terminal-line"><span>$</span> whoami → cloud_data_engineer</p>
+    <div class="hero-badge">Open to new opportunities</div>
     <h1 class="hero-name">Akash<br>Kant</h1>
-    <p class="hero-title">Cloud & DevOps Engineer</p>
+    <p class="hero-title">Cloud Data Engineer</p>
     <p class="hero-desc">
-      4.5+ years designing enterprise cloud architectures, automating infrastructure, and building data engineering pipelines — spanning Azure, AWS, Kubernetes, Databricks, and beyond.
+      4+ years building enterprise data pipelines and cloud infrastructure at scale. Most recently, sole technical owner of an AI price forecasting product for Marks and Spencer — reconciling 490M+ retail transactions with above 99.9% accuracy on Databricks and Azure.
     </p>
     <div class="hero-cta">
-      <a class="btn-primary" href="mailto:akashkant.tech@gmail.com">↗ Get in Touch</a>
+      <a class="btn-primary" href="mailto:akashkant.tech@gmail.com">Get in Touch</a>
       <a class="btn-outline" href="https://linkedin.com/in/akashkant97" target="_blank">LinkedIn</a>
       <a class="btn-outline" href="https://github.com/akashkant-tech" target="_blank">GitHub</a>
     </div>
@@ -689,8 +661,8 @@
       <div class="profile-img-wrap">
         <img src="profile.jpg" alt="Akash Kant" />
         <div class="stat-chip chip-1">
-          <div class="num">4.5+</div>
-          <div class="label">Years Exp.</div>
+          <div class="num">490M+</div>
+          <div class="label">Transactions Processed</div>
         </div>
         <div class="stat-chip chip-2">
           <div class="num">300<span style="font-size:14px">/300</span></div>
@@ -704,20 +676,20 @@
 <!-- STATS STRIP -->
 <div id="stats">
   <div class="stat-item">
+    <div class="big">490M+</div>
+    <div class="small">Transactions Reconciled</div>
+  </div>
+  <div class="stat-item">
+    <div class="big">99.9%</div>
+    <div class="small">Data Accuracy Achieved</div>
+  </div>
+  <div class="stat-item">
     <div class="big">9+</div>
     <div class="small">Certifications</div>
   </div>
   <div class="stat-item">
-    <div class="big">60%</div>
-    <div class="small">Provisioning Time Saved</div>
-  </div>
-  <div class="stat-item">
-    <div class="big">20%</div>
-    <div class="small">Cloud Cost Optimized</div>
-  </div>
-  <div class="stat-item">
-    <div class="big">0</div>
-    <div class="small">Downtime Migrations</div>
+    <div class="big">4+</div>
+    <div class="small">Years Experience</div>
   </div>
 </div>
 
@@ -727,39 +699,6 @@
   <h2 class="section-title">Technical<br>Arsenal</h2>
   <div class="skills-grid">
     <div class="skill-card fade-up">
-      <span class="skill-icon">☁️</span>
-      <div class="skill-name">Cloud Platforms</div>
-      <div class="skill-tags">
-        <span class="tag">Azure</span>
-        <span class="tag">AWS</span>
-        <span class="tag">Oracle Cloud</span>
-        <span class="tag">EC2</span>
-        <span class="tag">S3</span>
-        <span class="tag">Azure Data Factory</span>
-      </div>
-    </div>
-    <div class="skill-card fade-up">
-      <span class="skill-icon">🐳</span>
-      <div class="skill-name">Containerization</div>
-      <div class="skill-tags">
-        <span class="tag">Docker</span>
-        <span class="tag">Kubernetes</span>
-        <span class="tag">Container Security</span>
-        <span class="tag">Microservices</span>
-      </div>
-    </div>
-    <div class="skill-card fade-up">
-      <span class="skill-icon">⚙️</span>
-      <div class="skill-name">Automation & IaC</div>
-      <div class="skill-tags">
-        <span class="tag">Ansible</span>
-        <span class="tag">Jenkins</span>
-        <span class="tag">GitHub Actions</span>
-        <span class="tag">Bash</span>
-        <span class="tag">Python</span>
-      </div>
-    </div>
-    <div class="skill-card fade-up">
       <span class="skill-icon">📊</span>
       <div class="skill-name">Data Engineering</div>
       <div class="skill-tags">
@@ -767,30 +706,66 @@
         <span class="tag">Apache Spark</span>
         <span class="tag">SQL</span>
         <span class="tag">Delta Lake</span>
+        <span class="tag">Azure Data Factory</span>
+        <span class="tag">Airflow</span>
+        <span class="tag">Python</span>
+      </div>
+    </div>
+    <div class="skill-card fade-up">
+      <span class="skill-icon">☁️</span>
+      <div class="skill-name">Cloud Platforms</div>
+      <div class="skill-tags">
+        <span class="tag">Microsoft Azure</span>
+        <span class="tag">AWS EC2</span>
+        <span class="tag">AWS S3</span>
+        <span class="tag">AWS CodeArtifact</span>
+        <span class="tag">Oracle Cloud</span>
+      </div>
+    </div>
+    <div class="skill-card fade-up">
+      <span class="skill-icon">🤖</span>
+      <div class="skill-name">AI and GenAI</div>
+      <div class="skill-tags">
+        <span class="tag">Generative AI Engineering</span>
         <span class="tag">Vector Search</span>
+        <span class="tag">Feature Engineering</span>
+        <span class="tag">ML Data Pipelines</span>
+      </div>
+    </div>
+    <div class="skill-card fade-up">
+      <span class="skill-icon">⚙️</span>
+      <div class="skill-name">DevOps and Automation</div>
+      <div class="skill-tags">
+        <span class="tag">Ansible</span>
+        <span class="tag">Jenkins</span>
+        <span class="tag">GitHub</span>
+        <span class="tag">CI/CD</span>
+        <span class="tag">Docker</span>
+        <span class="tag">Bash</span>
+        <span class="tag">SonarQube</span>
       </div>
     </div>
     <div class="skill-card fade-up">
       <span class="skill-icon">🔍</span>
-      <div class="skill-name">Observability</div>
+      <div class="skill-name">Monitoring and Observability</div>
       <div class="skill-tags">
         <span class="tag">Dynatrace</span>
         <span class="tag">ELK Stack</span>
         <span class="tag">Grafana</span>
         <span class="tag">InfluxDB</span>
+        <span class="tag">Grafana Loki</span>
         <span class="tag">Sensu Go</span>
       </div>
     </div>
     <div class="skill-card fade-up">
       <span class="skill-icon">🔐</span>
-      <div class="skill-name">Security & Networking</div>
+      <div class="skill-name">Infrastructure and Security</div>
       <div class="skill-tags">
-        <span class="tag">IAM</span>
-        <span class="tag">Cloudflare</span>
-        <span class="tag">Firewalls</span>
-        <span class="tag">TCP/IP</span>
         <span class="tag">RHEL</span>
-        <span class="tag">Load Balancers</span>
+        <span class="tag">Cloudflare</span>
+        <span class="tag">InfoSec Compliance</span>
+        <span class="tag">Cloud Security</span>
+        <span class="tag">Distributed Systems</span>
       </div>
     </div>
   </div>
@@ -801,22 +776,25 @@
   <p class="section-label">Career</p>
   <h2 class="section-title">Where I've<br>Worked</h2>
   <div class="exp-list">
+
     <div class="exp-item fade-up">
       <div class="exp-meta">
         <div class="exp-period">May 2022 — Present</div>
         <div class="exp-company">Tata Consultancy Services</div>
+        <div class="exp-client">Client: Marks and Spencer, UK</div>
         <div class="exp-loc">Pune, India</div>
       </div>
       <div>
-        <div class="exp-role">Cloud Data Engineer</div>
+        <div class="exp-role">Data Engineer</div>
         <ul class="exp-bullets">
-          <li>Design and implement scalable data processing architectures using Databricks and Azure.</li>
-          <li>Develop automated pipelines for Generative AI solutions with Vector Search and large-scale data integration.</li>
-          <li>Optimized cloud infrastructure costs by 20% through efficient resource management and compute autoscaling.</li>
-          <li>Collaborate with cross-functional teams to ensure data integrity in highly regulated environments.</li>
+          <li>Sole technical owner of ISP (Intelligent Sales Probe), an enterprise price forecasting product for Marks and Spencer, liaising between data scientists, product managers, and client stakeholders to deliver daily pricing recommendations to store managers across UK and Ireland.</li>
+          <li>Migrated and reconciled 490M+ POS and online retail transactions (2013 to 2023) from fragmented legacy sources into structured dimensional tables, achieving above 99.9% data accuracy to power production price forecasting models.</li>
+          <li>Designed dedicated feature pipelines and model-ready data layers for senior data scientists, transforming raw POS and stock data into clean, schema-optimized inputs that directly fed daily store-level pricing decisions.</li>
+          <li>Led InfoSec compliance migration as technical owner and team lead, standardizing parameterization, logging, Dynatrace monitoring, and GitHub deployment workflows across multiple data engineers from lower to production environments.</li>
         </ul>
       </div>
     </div>
+
     <div class="exp-item fade-up">
       <div class="exp-meta">
         <div class="exp-period">Aug 2021 — Jan 2022</div>
@@ -826,12 +804,14 @@
       <div>
         <div class="exp-role">DevOps Engineer</div>
         <ul class="exp-bullets">
-          <li>Automated private cloud infrastructure deployment using Ansible, reducing provisioning time by 60%.</li>
-          <li>Implemented IAM protocols and secured cloud environments with Cloudflare security layers.</li>
-          <li>Led migration of legacy server workloads to containerized environments with zero downtime.</li>
+          <li>Migrated and deployed the complete infrastructure of Planksip.org onto a cloud-based VM using an open-source hosting platform, reducing operational costs and maximizing site efficiency.</li>
+          <li>Secured live web platform against malicious attacks using Cloudflare security layers and configured newsletter email setup for production-grade reliability.</li>
+          <li>Set up remote Windows and Linux environments for database and software systems for a healthcare client (Pixalere) across distributed machines.</li>
+          <li>Authored Ansible automation scripts to replicate system configurations across multiple machines and integrated proactive monitoring to reduce manual provisioning effort.</li>
         </ul>
       </div>
     </div>
+
     <div class="exp-item fade-up">
       <div class="exp-meta">
         <div class="exp-period">Sept 2019 — Feb 2021</div>
@@ -841,21 +821,59 @@
       <div>
         <div class="exp-role">Junior DevOps Engineer</div>
         <ul class="exp-bullets">
-          <li>Orchestrated microservices using Docker & Kubernetes for high-traffic Node.js applications.</li>
-          <li>Built CI/CD pipelines in Jenkins with SonarQube integration for code quality analysis.</li>
-          <li>Deployed centralized logging stacks (ELK & TIG) for real-time system health visibility.</li>
-          <li>Migrated package distribution to AWS CodeArtifact, improving developer productivity.</li>
+          <li>Deployed ELK stack for log collection and TIG stack with Grafana for log visualization, alongside Grafana Loki for live log aggregation and real-time monitoring.</li>
+          <li>Built CI/CD pipelines using Jenkins with SonarQube integration for automated application builds and code quality testing.</li>
+          <li>Implemented Sensu Go for full infrastructure monitoring and alerting, and used Ansible for automated configuration management across multiple environments.</li>
+          <li>Migrated internal NPM package repository from Sinopia to a private AWS CodeArtifact, streamlining internal package distribution for development teams.</li>
         </ul>
       </div>
     </div>
+
   </div>
 </section>
 
 <!-- CERTIFICATIONS -->
 <section id="certifications">
   <p class="section-label">Credentials</p>
-  <h2 class="section-title">Certifications &<br>Achievements</h2>
+  <h2 class="section-title">Certifications and<br>Achievements</h2>
   <div class="cert-grid">
+    <a class="cert-card fade-up" href="https://credentials.databricks.com/c7590bbe-d931-4477-8e09-c0f786f626db" target="_blank">
+      <div class="cert-badge db">🔶</div>
+      <div>
+        <div class="cert-title">Databricks Data Engineer Professional</div>
+        <div class="cert-issuer">Databricks · 2025</div>
+      </div>
+    </a>
+    <div class="cert-card fade-up">
+      <div class="cert-badge db">🔶</div>
+      <div>
+        <div class="cert-title">Databricks Generative AI Engineer Associate</div>
+        <div class="cert-issuer">Databricks · 2025</div>
+      </div>
+    </div>
+    <div class="cert-card fade-up">
+      <div class="cert-badge db">🔶</div>
+      <div>
+        <div class="cert-title">Databricks Data Engineer Associate</div>
+        <div class="cert-issuer">Databricks · 2024</div>
+      </div>
+    </div>
+    <div class="cert-card fade-up">
+      <div class="cert-badge rh">🎖️</div>
+      <div>
+        <div class="cert-title">Red Hat Certified System Administrator (RHCSA)</div>
+        <div class="cert-issuer">Red Hat · 2018</div>
+        <div class="cert-score">Perfect Score — 300/300</div>
+      </div>
+    </div>
+    <div class="cert-card fade-up">
+      <div class="cert-badge rh">🎖️</div>
+      <div>
+        <div class="cert-title">Red Hat Ansible Automation Specialist</div>
+        <div class="cert-issuer">Red Hat · 2018</div>
+        <div class="cert-score">Score — 286/300</div>
+      </div>
+    </div>
     <div class="cert-card fade-up">
       <div class="cert-badge azure">🔷</div>
       <div>
@@ -884,43 +902,6 @@
         <div class="cert-issuer">Oracle · 2021</div>
       </div>
     </div>
-    <div class="cert-card fade-up">
-      <div class="cert-badge rh">🎖️</div>
-      <div>
-        <div class="cert-title">Red Hat Certified Sysadmin (RHCSA)</div>
-        <div class="cert-issuer">Red Hat · 2018</div>
-        <div class="cert-score">Perfect Score — 300/300</div>
-      </div>
-    </div>
-    <div class="cert-card fade-up">
-      <div class="cert-badge rh">🎖️</div>
-      <div>
-        <div class="cert-title">Red Hat Ansible Automation Specialist</div>
-        <div class="cert-issuer">Red Hat · 2018</div>
-        <div class="cert-score">Score — 286/300</div>
-      </div>
-    </div>
-    <div class="cert-card fade-up">
-      <div class="cert-badge db">🔶</div>
-      <div>
-        <div class="cert-title">Databricks Generative AI Engineer Associate</div>
-        <div class="cert-issuer">Databricks · 2025</div>
-      </div>
-    </div>
-    <div class="cert-card fade-up">
-      <div class="cert-badge db">🔶</div>
-      <div>
-        <div class="cert-title">Databricks Data Engineer Professional</div>
-        <div class="cert-issuer">Databricks · 2025</div>
-      </div>
-    </div>
-    <div class="cert-card fade-up">
-      <div class="cert-badge db">🔶</div>
-      <div>
-        <div class="cert-title">Databricks Data Engineer Associate</div>
-        <div class="cert-issuer">Databricks · 2024</div>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -929,50 +910,62 @@
   <p class="section-label">Work</p>
   <h2 class="section-title">Key<br>Projects</h2>
   <div class="projects-grid">
+
     <div class="project-card fade-up">
       <div class="project-num">01</div>
-      <div class="project-title">Cloud Service Model Suite (SaaS, PaaS, CaaS, STaaS)</div>
-      <p class="project-desc">End-to-end automation suite for on-demand cloud services in a Red Hat environment. Automated storage and container provisioning using Ansible playbooks for rapid developer environment deployment.</p>
-      <div class="project-stack">
-        <span class="stack-tag">RHEL</span>
-        <span class="stack-tag">Ansible</span>
-        <span class="stack-tag">Python</span>
-        <span class="stack-tag">Shell</span>
-      </div>
-    </div>
-    <div class="project-card fade-up">
-      <div class="project-num">02</div>
-      <div class="project-title">Anti-Collision & Vehicular Alert System</div>
-      <p class="project-desc">Vehicle-to-vehicle communication system to prevent collisions using networking protocols and real-time data processing. Published as a research paper at the IEEE Technovation conference and listed on IEEE Xplore.</p>
-      <div class="project-stack">
-        <span class="stack-tag">IoT</span>
-        <span class="stack-tag">Networking</span>
-        <span class="stack-tag">IEEE Research</span>
-        <span class="stack-tag">Real-time</span>
-      </div>
-    </div>
-    <div class="project-card fade-up">
-      <div class="project-num">03</div>
-      <div class="project-title">GenAI Data Pipelines at Scale (TCS)</div>
-      <p class="project-desc">Designed and implemented Generative AI data pipelines leveraging Databricks Vector Search and large-scale Azure integrations. Achieved 20% infrastructure cost reduction through compute autoscaling policies.</p>
+      <div class="project-title">ISP — AI Price Forecasting Platform (Marks and Spencer)</div>
+      <p class="project-desc">Enterprise product that reconciled 490M+ POS and online retail transactions from 2013 to 2023, building model-ready dimensional tables and feature pipelines for senior data scientists. The output powered daily store-level pricing decisions sent to store managers across UK and Ireland every single day.</p>
       <div class="project-stack">
         <span class="stack-tag">Databricks</span>
         <span class="stack-tag">Azure</span>
-        <span class="stack-tag">Vector Search</span>
         <span class="stack-tag">Apache Spark</span>
+        <span class="stack-tag">Delta Lake</span>
+        <span class="stack-tag">SQL</span>
+        <span class="stack-tag">ADF</span>
       </div>
     </div>
+
+    <div class="project-card fade-up">
+      <div class="project-num">02</div>
+      <div class="project-title">Cloud Service Automation Suite (SaaS, PaaS, CaaS, STaaS)</div>
+      <p class="project-desc">Built a full self-service cloud platform from scratch on RHEL delivering all four service models on demand through a browser interface. Included a Container as a Service layer for real-time Docker environment management, a browser-based code execution environment for developers, on-demand software delivery, object and block level storage via NFS and SMB, and a private Docker registry on AWS EC2 for secure internal image distribution.</p>
+      <div class="project-stack">
+        <span class="stack-tag">RHEL</span>
+        <span class="stack-tag">Ansible</span>
+        <span class="stack-tag">Docker</span>
+        <span class="stack-tag">Python CGI</span>
+        <span class="stack-tag">AWS EC2</span>
+        <span class="stack-tag">NFS</span>
+        <span class="stack-tag">SMB</span>
+      </div>
+    </div>
+
+    <div class="project-card fade-up">
+      <div class="project-num">03</div>
+      <div class="project-title">Distributed Hadoop Cluster Automation</div>
+      <p class="project-desc">Engineered a one-click provisioning tool that automated full Hadoop cluster setup across distributed machines — covering HDFS, MapReduce, Data Nodes, Name Nodes, Job Trackers and Task Trackers in a single run. What previously took hours of manual configuration across multiple machines was reduced to a single command.</p>
+      <div class="project-stack">
+        <span class="stack-tag">Python</span>
+        <span class="stack-tag">Ansible</span>
+        <span class="stack-tag">CGI</span>
+        <span class="stack-tag">Hadoop</span>
+        <span class="stack-tag">HDFS</span>
+        <span class="stack-tag">MapReduce</span>
+      </div>
+    </div>
+
     <div class="project-card fade-up">
       <div class="project-num">04</div>
-      <div class="project-title">Zero-Downtime Legacy Cloud Migration</div>
-      <p class="project-desc">Led full migration of legacy server workloads to containerized environments using Docker and Kubernetes with zero downtime, ensuring 100% service continuity across production-grade systems.</p>
+      <div class="project-title">Anti-Collision and Vehicular Alert System — IEEE Published</div>
+      <p class="project-desc">Engineered a vehicle-to-vehicle communication system using real-time networking protocols to trigger proximity and velocity-based collision alerts. Presented as a research paper at the IEEE Technovation conference and published on IEEE Xplore.</p>
       <div class="project-stack">
-        <span class="stack-tag">Docker</span>
-        <span class="stack-tag">Kubernetes</span>
-        <span class="stack-tag">Jenkins CI/CD</span>
-        <span class="stack-tag">Cloudflare</span>
+        <span class="stack-tag">IoT</span>
+        <span class="stack-tag">Networking</span>
+        <span class="stack-tag">Real-time Processing</span>
+        <span class="stack-tag">IEEE Research</span>
       </div>
     </div>
+
   </div>
 </section>
 
@@ -980,7 +973,7 @@
 <section id="contact">
   <p class="section-label">Say Hello</p>
   <h2 class="section-title">Let's Build<br>Something</h2>
-  <p class="contact-sub">Open to new opportunities, collaborations, and interesting conversations about cloud architecture and data engineering.</p>
+  <p class="contact-sub">Open to new opportunities, collaborations, and conversations about data engineering and cloud architecture.</p>
   <div class="contact-links">
     <a class="contact-link" href="mailto:akashkant.tech@gmail.com">
       ✉ akashkant.tech@gmail.com
@@ -989,22 +982,21 @@
       in LinkedIn
     </a>
     <a class="contact-link" href="https://github.com/akashkant-tech" target="_blank">
-      ⌥ GitHub
+      GitHub
     </a>
     <a class="contact-link" href="tel:+917062753503">
-      ☏ +91-7062753503
+      +91-7062753503
     </a>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <span class="footer-text">© 2025 Akash Kant. Built for GitHub Pages.</span>
+  <span class="footer-text">2026 Akash Kant. Built for GitHub Pages.</span>
   <a class="footer-url" href="https://akashkant-tech.github.io">akashkant-tech.github.io</a>
 </footer>
 
 <script>
-// Intersection Observer for fade-up animations
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry, i) => {
     if (entry.isIntersecting) {
@@ -1018,17 +1010,18 @@ document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
 // Typewriter terminal line
 const terminal = document.querySelector('.terminal-line');
-const text = terminal.innerHTML;
-terminal.innerHTML = '';
-let i = 0;
-function type() {
-  if (i < text.length) {
-    terminal.innerHTML += text.charAt(i);
-    i++;
-    setTimeout(type, 30);
-  }
+if (terminal) {
+  const text = terminal.innerHTML;
+  terminal.innerHTML = '';
+  let i = 0;
+  const type = () => {
+    if (i < text.length) {
+      terminal.innerHTML = text.slice(0, ++i);
+      setTimeout(type, 35);
+    }
+  };
+  setTimeout(type, 600);
 }
-setTimeout(type, 500);
 </script>
 </body>
 </html>
